@@ -865,7 +865,7 @@ class communication_SwCtrler(threading.Thread):
 
 if __name__ == "__main__":
 
-    logging.basicConfig(filename='fgbam.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+    logging.basicConfig(filename='fgbam.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s %(message)s', datefmt='%m/%d/%Y %H:%M:%S')
     sock_serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock_serv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock_serv.bind((IP_FGBAM, PORT_FGBAM))
